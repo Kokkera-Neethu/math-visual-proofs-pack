@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Visual Proofs Pack</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Math Visual Proofs Pack</h1>
+  <p>Interactive Animated Visualizations for Math Formulas and Proofs</p>
+</header>
+
+<section class="top-controls">
+  <input type="text" id="searchInput" placeholder="Search formula..." />
+
+  <select id="categoryFilter">
+    <option value="All">All Categories</option>
+    <option value="Geometry">Geometry</option>
+    <option value="Algebra">Algebra</option>
+    <option value="Trigonometry">Trigonometry</option>
+    <option value="Series">Series</option>
+    <option value="Mensuration">Mensuration</option>
+  </select>
+</section>
+
+<main>
+  <aside>
+    <h2>Formulas</h2>
+    <div id="formulaList"></div>
+  </aside>
+
+  <section class="content">
+    <div class="box">
+      <p class="category" id="formulaCategory">Geometry</p>
+      <h2 id="formulaTitle">Area of Square</h2>
+      <h1 id="formulaText">A = a²</h1>
+      <p id="formulaExplanation"></p>
+    </div>
+
+    <div class="box buttons">
+      <button onclick="playAnimation()">Play</button>
+      <button onclick="pauseAnimation()">Pause</button>
+      <button onclick="resetAnimation()">Reset</button>
+
+      <label>Size</label>
+      <input type="range" id="sizeSlider" min="60" max="240" value="150" />
+
+      <label>n</label>
+      <input type="range" id="nSlider" min="3" max="12" value="6" />
+    </div>
+
+    <div class="box visual-layout">
+  <div class="canvas-panel">
+    <canvas id="visualCanvas" width="760" height="460"></canvas>
+  </div>
+
+  <div class="visual-notes-panel">
+    <h3>Diagram Notes</h3>
+    <div id="visualNotes"></div>
+  </div>
+</div>
+
+    <div class="box">
+      <h3>Proof Steps</h3>
+      <ol id="proofSteps"></ol>
+    </div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
